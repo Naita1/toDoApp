@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <h1>Minhas Tarefas</h1>
+
+    <div id="feedback-message"></div>
+
+    <div class="container">
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="Adicionar nova tarefa..." required>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        <div class="filters-and-actions">
+            <div class="filters">
+                <button id="filter-all" class="filter-button active">Todas</button>
+                <button id="filter-active" class="filter-button">Ativas</button>
+                <button id="filter-completed" class="filter-button">Concluídas</button>
+            </div>
+            <div class="task-actions">
+                <span id="task-count">0 tarefas ativas</span>
+                <button id="clear-completed-button" class="action-button">Limpar Concluídas</button>
+            </div>
+        </div>
+        
+        <ul id="task-list">
+        </ul>
+    </div>
+
+    <div id="delete-confirmation-modal" class="modal">
+        <div class="modal-content">
+            <p>Tem certeza que deseja excluir esta tarefa?</p>
+            <div class="modal-buttons">
+                <button id="confirm-delete-button" class="action-button delete-button">Excluir</button>
+                <button id="cancel-delete-button" class="action-button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script> 
+</body>
+</html>
